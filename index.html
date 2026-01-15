@@ -1,10 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="x-icon" href="images/Logot (1).png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zoila's ChildCare</title>
+    <link rel="icon" type="x-icon" href="images/Logot (1).png" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+    />
+    <title>Zoila's Daycare</title>
     <link rel="stylesheet" href="style.css" />
     <!-- font awesome cdn link  -->
     <link
@@ -20,290 +23,1155 @@
   </head>
   <body>
     <!-- header section starts -->
-      <header class="header">
-        <a href="#home" class="logo">
-          <i href="#home" class="fas fa-shapes"></i> Zoila's ChildCare
-        </a>
-        <nav class="navbar">
-          <a href="#home">Home</a>
-          <a href="#about">About us</a>
-          <a href="#education">Education</a>
-          <a href="#teacher">Teacher</a>
-          <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact us</a>
+    <header class="header">
+      <a href="#home" class="logo">
+        <i href="#home" class="fas fa-shapes"></i> Zoila's Daycare
+      </a>
+      <nav class="navbar">
+        <a href="#home" data-translate="nav.home">Home</a>
+        <a href="#about" data-translate="nav.about">About us</a>
+        <a href="#activities" data-translate="nav.activities">Activities</a>
+        <a href="#teacher" data-translate="nav.teacher">Teacher</a>
+        <a href="#testimonials" data-translate="nav.reviews">Reviews</a>
+        <a href="#gallery" data-translate="nav.gallery">Gallery</a>
+        <a href="#calendar" data-translate="nav.calendar">Calendar</a>
+        <a href="#nutrition" data-translate="nav.nutrition">Nutrition</a>
+        <a href="#contact" data-translate="nav.contact">Contact us</a>
       </nav>
-      
+
       <div class="icons">
-        <div class="far fa-handshake"></div>
+        <button
+          class="language-toggle"
+          id="language-toggle"
+          aria-label="Toggle language"
+        >
+          <i class="fas fa-language"></i>
+          <span class="lang-text">ES</span>
+        </button>
         <div class="fa fa-bars" id="menu-btn"></div>
+        <div class="fa fa-times" id="close-btn" style="display: none"></div>
       </div>
-      
     </header>
     <!-- header section ends -->
     <!-- Home section starts -->
 
-      <section class="home" id="home">
-        <div class="content">
-          <h3>welcome to our <span>Home Child Care</span></h3>
-          <p>
-            "Growing together, always learning: Your trusted Childcare."
-          </p>
-          <a href="#about" class="btn">Discover</a>
+    <section class="home" id="home">
+      <div class="home-background">
+        <div class="floating-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
         </div>
-        
-        <div class="image">
-          <img src="images/Logot (1).png" alt="" />
+      </div>
+      <div class="content">
+        <div class="welcome-badge">
+          <i class="fas fa-heart"></i>
+          <span data-translate="home.welcome"
+            >Trusted by Families Since Day One</span
+          >
         </div>
-        
-        <div class="custom-shape-divider-bottom-1684324473">
-          <svg
+        <h3 class="home-title">
+          <span class="title-line" data-translate="home.welcomeTitle"
+            >Welcome to our</span
+          >
+          <span class="title-highlight" data-translate="home.daycare"
+            >Home Daycare</span
+          >
+        </h3>
+        <p class="home-subtitle">
+          <span data-translate="home.subtitle"
+            >"Growing together, always learning: Your trusted Daycare."</span
+          >
+        </p>
+        <div class="home-features">
+          <div class="feature-item">
+            <i class="fas fa-shield-alt"></i>
+            <span data-translate="home.safe">Safe & Secure</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-graduation-cap"></i>
+            <span data-translate="home.educational">Educational</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-heart"></i>
+            <span data-translate="home.nurturing">Nurturing</span>
+          </div>
+        </div>
+        <div class="home-buttons">
+          <a
+            href="#about"
+            class="btn btn-primary"
+            data-translate="home.discover"
+            >Discover More</a
+          >
+          <a
+            href="#contact"
+            class="btn btn-secondary"
+            data-translate="home.contact"
+            >Get In Touch</a
+          >
+        </div>
+      </div>
+
+      <div class="image">
+        <div class="image-wrapper">
+          <div class="carousel-container">
+            <div class="carousel-slides">
+              <div class="carousel-slide active">
+                <img src="images/zoila.png" alt="Zoila's Daycare" />
+              </div>
+              <div class="carousel-slide">
+                <img src="images/gallery1.jpg" alt="Gallery Image 1" />
+              </div>
+              <div class="carousel-slide">
+                <img src="images/gallery4.jpg" alt="Gallery Image 4" />
+              </div>
+              <div class="carousel-slide">
+                <img src="images/gallery6.jpg" alt="Gallery Image 6" />
+              </div>
+              <div class="carousel-slide">
+                <img src="images/gallery9.jpeg" alt="Gallery Image 9" />
+              </div>
+            </div>
+            <button
+              class="carousel-btn carousel-prev"
+              aria-label="Previous image"
+            >
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-btn carousel-next" aria-label="Next image">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="carousel-dots">
+              <span class="dot active" data-slide="0"></span>
+              <span class="dot" data-slide="1"></span>
+              <span class="dot" data-slide="2"></span>
+              <span class="dot" data-slide="3"></span>
+              <span class="dot" data-slide="4"></span>
+            </div>
+          </div>
+          <div class="image-decoration"></div>
+        </div>
+      </div>
+
+      <div class="custom-shape-divider-bottom-1684324473">
+        <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
-          >
-          <path
-          d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
-          class="shape-fill"
-          ></path>
-        </svg>
+        ></svg>
       </div>
     </section>
     <!-- Home section Ends -->
 
     <!-- About us starts -->
 
-      <section class="about" id="about">
-        <section class="hidden">
-          <h1 class="heading"><span>About</span> Us</h1>
-          <div class="row">
-            <div class="image">
-              <img src="images/abouts.jpg" alt="" />
+    <section class="about" id="about">
+      <div class="hidden">
+        <h1 class="heading"><span>About</span> Us</h1>
+        <div class="row">
+          <div class="image">
+            <div class="image-container">
+              <img src="images/abouts.jpg" alt="Zoila's Daycare - About Us" />
+              <div class="image-overlay">
+                <div class="overlay-content">
+                  <i class="fas fa-heart"></i>
+                  <p data-translate="about.overlay">Nurturing Young Minds</p>
+                </div>
+              </div>
             </div>
-          
-          <div class="content">
-            <h3>Love, Laughter, and Learning – Every Day!</h3>
-            <p>
-              At Zoila’s Childcare, we are dedicated to providing a safe, nurturing, and enriching environment for children to grow and thrive. Our journey began with a simple yet profound belief: every child is a unique individual with boundless potential.
-            </p>
-            <p>
-              ⦁ We provide opportunities and interactions to foster children's physical, social, and emotional growth. ✅
-            </p>
-            <p>
-              ⦁ We offer care for children from 4 months to 5 years old. ✅
-            </p>
-            <p>
-              ⦁ We Include  Breakfast, lunch and afternoon snack. ✅
-            </p>
-            <a href="#contact" class="btn">Get In touch</a>
           </div>
-         </div>
-       </section>
-      </section>
+
+          <div class="content">
+            <div class="content-header">
+              <h3 data-translate="about.heading">
+                Love, Laughter, and Learning – Every Day!
+              </h3>
+            </div>
+            <p class="intro-text" data-translate="about.intro">
+              At Zoila's Daycare, we are dedicated to providing a safe,
+              nurturing, and enriching environment for children to grow and
+              thrive. Our journey began with a simple yet profound belief: every
+              child is a unique individual with boundless potential. We create a
+              warm, family-like atmosphere where children feel loved, valued,
+              and encouraged to explore their interests while building strong
+              foundations for their future.
+            </p>
+
+            <div class="features-list">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-child"></i>
+                </div>
+                <div class="feature-content">
+                  <h4 data-translate="about.holistic">Holistic Development</h4>
+                  <p data-translate="about.holisticDesc">
+                    We provide opportunities and interactions to foster
+                    children's physical, social, and emotional growth.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-baby"></i>
+                </div>
+                <div class="feature-content">
+                  <h4 data-translate="about.age">Age-Appropriate Care</h4>
+                  <p data-translate="about.ageDesc">
+                    We offer care for children from 3 months to 8 years old,
+                    tailored to each developmental stage.
+                  </p>
+                </div>
+              </div>
+
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-utensils"></i>
+                </div>
+                <div class="feature-content">
+                  <h4 data-translate="about.nutritious">Nutritious Meals</h4>
+                  <p data-translate="about.nutritiousDesc">
+                    We prepare healthy, home-cooked meals that support
+                    children's growth and development.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="stats-container">
+              <div class="stat-item">
+                <div class="stat-number">3+</div>
+                <div class="stat-label" data-translate="about.months">
+                  Months
+                </div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">8</div>
+                <div class="stat-label" data-translate="about.years">
+                  Years Old
+                </div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-number">3</div>
+                <div class="stat-label" data-translate="about.meals">
+                  Meals Daily
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="#contact"
+              class="btn btn-about"
+              data-translate="about.contactBtn"
+              >Get In Touch</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- about us ends -->
 
-    <!-- Education section stat -->
-
-    <!-- Education section Ends -->
+    <!-- Activities section start -->
     <section class="hidden">
-      <section class="education" id="education">
-        <h1 class="heading">our <span> education</span></h1>
-        
-        <div class="box-container">
-          <div class="box">
-            <h3>music lessons</h3>
-            <p>Choose Harmony Haven Music Lessons to provide your child with a well-rounded educational experience that nurtures their musical talents and lays the foundation for a lifetime of appreciation and participation in the world of music.</p>
-            <br>
-            <img src="images/education1.png" alt="" />
+      <section class="activities" id="activities">
+        <h1 class="heading">
+          <span data-translate="activities.our">our</span>
+          <span data-translate="activities.activities">activities</span>
+        </h1>
+
+        <div class="activities-intro">
+          <p data-translate="activities.intro">
+            We offer a variety of engaging activities designed to promote
+            learning, creativity, and fun for children of all ages.
+          </p>
+        </div>
+
+        <div class="activities-grid">
+          <div class="activity-card">
+            <div class="activity-icon-wrapper">
+              <div class="activity-icon">
+                <img src="images/activities1.png" alt="Play and Have Fun" />
+              </div>
+              <div class="icon-bg"></div>
+            </div>
+            <div class="activity-content">
+              <h3 data-translate="activities.play">Play & Have Fun</h3>
+              <p data-translate="activities.playDesc">
+                Structured playtime that encourages social interaction,
+                creativity, and physical development through fun activities.
+              </p>
+            </div>
           </div>
-          
-          <div class="box">
-            <h3>Read Books</h3>
-            <p>We understand the importance of early literacy development. Our dedicated staff is committed to creating an atmosphere that encourages curiosity, imagination, and a deep appreciation for books.</p>
-            <br>
-            <img src="images/kids.png" alt="" />
+
+          <div class="activity-card">
+            <div class="activity-icon-wrapper">
+              <div class="activity-icon">
+                <img src="images/activities2.png" alt="Games" />
+              </div>
+              <div class="icon-bg"></div>
+            </div>
+            <div class="activity-content">
+              <h3 data-translate="activities.games">Games</h3>
+              <p data-translate="activities.gamesDesc">
+                Interactive games that develop problem-solving skills, teamwork,
+                and cognitive abilities while having fun.
+              </p>
+            </div>
           </div>
-          
-          <div class="box">
-            <h3>drawing lessons</h3>
-            <p>Choose Creative Canvas Drawing Lessons to provide your child with a well-rounded educational experience that nurtures their artistic talents and cultivates a lifelong love for the world of art and creativity.</p>
-            <br>
-            <img src="images/education3.png" alt="" />
+
+          <div class="activity-card">
+            <div class="activity-icon-wrapper">
+              <div class="activity-icon">
+                <img src="images/activities3.png" alt="Read and Learn" />
+              </div>
+              <div class="icon-bg"></div>
+            </div>
+            <div class="activity-content">
+              <h3 data-translate="activities.read">Read & Learn</h3>
+              <p data-translate="activities.readDesc">
+                Storytelling and reading sessions that foster a love for books
+                and enhance language development.
+              </p>
+            </div>
+          </div>
+
+          <div class="activity-card">
+            <div class="activity-icon-wrapper">
+              <div class="activity-icon">
+                <img src="images/activities5.png" alt="Paint" />
+              </div>
+              <div class="icon-bg"></div>
+            </div>
+            <div class="activity-content">
+              <h3 data-translate="activities.art">Paint & Art</h3>
+              <p data-translate="activities.artDesc">
+                Creative art activities including painting, drawing, and crafts
+                that express imagination and artistic talents.
+              </p>
+            </div>
           </div>
         </div>
       </section>
     </section>
+    <!-- Activities section ends -->
+
+    <!-- nutrition section start -->
+    <section class="hidden">
+      <section class="nutrition" id="nutrition">
+        <h1 class="heading">
+          <span data-translate="nutrition.our">Our</span>
+          <span data-translate="nutrition.menu">Nutrition Menu</span>
+        </h1>
+        <div class="nutrition-intro">
+          <p data-translate="nutrition.intro">
+            We provide healthy, balanced meals and snacks to keep your children
+            energized throughout the day. All meals are prepared with care and
+            nutrition in mind. All meals are prepared fresh daily using quality
+            ingredients.
+          </p>
+        </div>
+
+        <div class="nutrition-content">
+          <div class="daily-menus-section">
+            <h3 class="menus-title">
+              <i class="fas fa-calendar-week"></i>
+              <span data-translate="nutrition.dailyMenus">Daily Menus</span>
+            </h3>
+            <div class="menus-grid">
+              <div class="menu-card">
+                <div class="menu-header">
+                  <i class="fas fa-utensils"></i>
+                  <h4 data-translate="nutrition.menu1">Complete Menu 1</h4>
+                </div>
+                <div class="menu-items">
+                  <div class="menu-item">
+                    <div class="meal-icon breakfast">
+                      <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="meal-content">
+                      <h5 data-translate="nutrition.breakfast">Breakfast</h5>
+                      <p data-translate="nutrition.breakfast1">
+                        Oatmeal porridge with cooked pear
+                      </p>
+                    </div>
+                  </div>
+                  <div class="menu-item">
+                    <div class="meal-icon lunch">
+                      <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="meal-content">
+                      <h5 data-translate="nutrition.lunch">Lunch</h5>
+                      <p data-translate="nutrition.lunch1">
+                        Pumpkin puree with lentils
+                      </p>
+                    </div>
+                  </div>
+                  <div class="menu-item">
+                    <div class="meal-icon snack">
+                      <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <div class="meal-content">
+                      <h5 data-translate="nutrition.snack">Afternoon Snack</h5>
+                      <p data-translate="nutrition.snack1">Mashed papaya</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-card">
+                <div class="menu-header">
+                  <i class="fas fa-utensils"></i>
+                  <h4 data-translate="nutrition.menu2">Complete Menu 2</h4>
+                </div>
+                <div class="menu-items">
+                  <div class="menu-item">
+                    <div class="meal-icon breakfast">
+                      <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="meal-content">
+                      <h5 data-translate="nutrition.breakfast">Breakfast</h5>
+                      <p data-translate="nutrition.breakfast2">
+                        Cooked apple puree
+                      </p>
+                    </div>
+                  </div>
+                  <div class="menu-item">
+                    <div class="meal-icon lunch">
+                      <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="meal-content">
+                      <h5 data-translate="nutrition.lunch">Lunch</h5>
+                      <p data-translate="nutrition.lunch2">
+                        Brown rice with vegetables
+                      </p>
+                    </div>
+                  </div>
+                  <div class="menu-item">
+                    <div class="meal-icon snack">
+                      <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <div class="meal-content">
+                      <h5 data-translate="nutrition.snack">Afternoon Snack</h5>
+                      <p data-translate="nutrition.snack2">
+                        Mashed cooked plum
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-card">
+                <div class="menu-header">
+                  <i class="fas fa-utensils"></i>
+                  <h4 data-translate="nutrition.menu3">Complete Menu 3</h4>
+                </div>
+                <div class="menu-items">
+                  <div class="menu-item">
+                    <div class="meal-icon breakfast">
+                      <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="meal-content">
+                      <h5 data-translate="nutrition.breakfast">Breakfast</h5>
+                      <p data-translate="nutrition.breakfast3">
+                        Oatmeal with ripe banana
+                      </p>
+                    </div>
+                  </div>
+                  <div class="menu-item">
+                    <div class="meal-icon lunch">
+                      <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="meal-content">
+                      <h5 data-translate="nutrition.lunch">Lunch</h5>
+                      <p data-translate="nutrition.lunch3">
+                        Sweet potato puree with vegetables
+                      </p>
+                    </div>
+                  </div>
+                  <div class="menu-item">
+                    <div class="meal-icon snack">
+                      <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <div class="meal-content">
+                      <h5 data-translate="nutrition.snack">Afternoon Snack</h5>
+                      <p data-translate="nutrition.snack3">Cooked pear</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="menu-card">
+                <div class="menu-header">
+                  <i class="fas fa-utensils"></i>
+                  <h4 data-translate="nutrition.menu4">Complete Menu 4</h4>
+                </div>
+                <div class="menu-items">
+                  <div class="menu-item">
+                    <div class="meal-icon breakfast">
+                      <i class="fas fa-sun"></i>
+                    </div>
+                    <div class="meal-content">
+                      <h5 data-translate="nutrition.breakfast">Breakfast</h5>
+                      <p data-translate="nutrition.breakfast4">
+                        Smooth pear puree
+                      </p>
+                    </div>
+                  </div>
+                  <div class="menu-item">
+                    <div class="meal-icon lunch">
+                      <i class="fas fa-utensils"></i>
+                    </div>
+                    <div class="meal-content">
+                      <h5 data-translate="nutrition.lunch">Lunch</h5>
+                      <p data-translate="nutrition.lunch4">
+                        Rice with broccoli
+                      </p>
+                    </div>
+                  </div>
+                  <div class="menu-item">
+                    <div class="meal-icon snack">
+                      <i class="fas fa-cookie-bite"></i>
+                    </div>
+                    <div class="meal-content">
+                      <h5 data-translate="nutrition.snack">Afternoon Snack</h5>
+                      <p data-translate="nutrition.snack4">Cooked apple</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="nutrition-tips">
+            <h3 class="tips-title">
+              <i class="fas fa-lightbulb"></i>
+              <span data-translate="nutrition.tipsTitle"
+                >Important Tips for Success</span
+              >
+            </h3>
+            <div class="tips-grid">
+              <div class="tip-card">
+                <div class="tip-icon">
+                  <i class="fas fa-tint"></i>
+                </div>
+                <h4 data-translate="nutrition.hydration">Hydration</h4>
+                <p data-translate="nutrition.hydrationDesc">
+                  Offer water throughout the day to keep the digestive system
+                  moving.
+                </p>
+              </div>
+              <div class="tip-card">
+                <div class="tip-icon">
+                  <i class="fas fa-apple-alt"></i>
+                </div>
+                <h4 data-translate="nutrition.fruits">Key Fruits</h4>
+                <p data-translate="nutrition.fruitsDesc">
+                  Prioritize pear, papaya, and plum as they are naturally
+                  effective for constipation.
+                </p>
+              </div>
+              <div class="tip-card">
+                <div class="tip-icon">
+                  <i class="fas fa-seedling"></i>
+                </div>
+                <h4 data-translate="nutrition.quality">Food Quality</h4>
+                <p data-translate="nutrition.qualityDesc">
+                  Avoid ultra-processed foods.
+                </p>
+              </div>
+              <div class="tip-card">
+                <div class="tip-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <h4 data-translate="nutrition.safety">Safety</h4>
+                <p data-translate="nutrition.safetyDesc">
+                  Adjust the texture of the food (purees vs. mashes) according
+                  to your baby's age and development.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- nutrition section ends -->
 
     <!-- teacher section start -->
     <section class="hidden">
       <section class="teacher" id="teacher">
-        <h1 class="heading">Our <span>Teacher</span></h1>
-        
-        <div class="box-container">
-          <div class="box">
-            <img src="images/teacher.jpeg" alt="" />
-            <h3>Zoila Liriano</h3>
-            <p>Owner</p>
-            <p>Safety Certifications</p>
-            <p>⦁ Preventive Health and Safety for Child Care Providers ✅</p>
-            <p>⦁ Pediatric First AID | CPR AED ✅ </p>
-            <p>⦁ Family Child Care Home Orientation ✅</p>
-            <p>⦁ CA Child Abuse Mandated Training ✅</p>
-            <div class="share">
-              <i onclick="igpersonal()" class="fab fa-instagram"></i>
-              <i onclick="fbpersonal()" class="fab fa-facebook-f"></i>
+        <h1 class="heading">
+          <span data-translate="teacher.our">Our</span>
+          <span data-translate="teacher.teacher">Teacher</span>
+        </h1>
+
+        <div class="teacher-container">
+          <div class="teacher-card">
+            <div class="teacher-image-wrapper">
+              <div class="teacher-image-frame">
+                <img
+                  src="images/teacher.jpeg"
+                  alt="Zoila Liriano - Daycare Owner"
+                />
+                <div class="image-badge">
+                  <i class="fas fa-award"></i>
+                </div>
+              </div>
+            </div>
+
+            <div class="teacher-info">
+              <div class="teacher-header">
+                <h3>Zoila Liriano</h3>
+                <p class="teacher-role" data-translate="teacher.role">
+                  Owner & Lead Caregiver
+                </p>
+                <div class="role-underline"></div>
+              </div>
+
+              <div class="teacher-bio">
+                <p data-translate="teacher.bio">
+                  Dedicated to providing exceptional care and creating a
+                  nurturing environment where every child can thrive and grow.
+                </p>
+              </div>
+
+              <div class="certifications-section">
+                <h4 class="certifications-title">
+                  <i class="fas fa-certificate"></i>
+                  <span data-translate="teacher.certifications"
+                    >Safety Certifications</span
+                  >
+                </h4>
+                <div class="certifications-list">
+                  <div class="cert-item">
+                    <div class="cert-icon">
+                      <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="cert-content">
+                      <h5 data-translate="teacher.cert1">
+                        Preventive Health and Safety
+                      </h5>
+                      <p data-translate="teacher.cert1Desc">
+                        Child Care Providers Certification
+                      </p>
+                    </div>
+                    <div class="cert-check">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                  </div>
+
+                  <div class="cert-item">
+                    <div class="cert-icon">
+                      <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <div class="cert-content">
+                      <h5 data-translate="teacher.cert2">
+                        Pediatric First Aid
+                      </h5>
+                      <p data-translate="teacher.cert2Desc">
+                        CPR AED Certified
+                      </p>
+                    </div>
+                    <div class="cert-check">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                  </div>
+
+                  <div class="cert-item">
+                    <div class="cert-icon">
+                      <i class="fas fa-home"></i>
+                    </div>
+                    <div class="cert-content">
+                      <h5 data-translate="teacher.cert3">Family Child Care</h5>
+                      <p data-translate="teacher.cert3Desc">
+                        Home Orientation Completed
+                      </p>
+                    </div>
+                    <div class="cert-check">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                  </div>
+
+                  <div class="cert-item">
+                    <div class="cert-icon">
+                      <i class="fas fa-gavel"></i>
+                    </div>
+                    <div class="cert-content">
+                      <h5 data-translate="teacher.cert4">
+                        CA Mandated Training
+                      </h5>
+                      <p data-translate="teacher.cert4Desc">
+                        Child Abuse Prevention
+                      </p>
+                    </div>
+                    <div class="cert-check">
+                      <i class="fas fa-check-circle"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="teacher-social">
+                <p class="social-title" data-translate="teacher.connect">
+                  Connect With Us
+                </p>
+                <div class="share">
+                  <a
+                    href="https://www.instagram.com/zoilas_daycare/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-btn"
+                  >
+                    <i class="fab fa-instagram"></i>
+                    <span data-translate="teacher.instagram">Instagram</span>
+                  </a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61551035442788&checkpoint_src=any"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="social-btn"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                    <span data-translate="teacher.facebook">Facebook</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </section>
-      
+
     <!-- teacher section ends -->
 
-    <!-- activities section start -->
-
-    <section class="activities">
-      <h1 class="heading">our <span>activities</span></h1>
-
-      <div class="box-container">
-        <div class="box">
-          <img src="images/activities1.png" alt="" />
-          <h3>Play Have fun</h3>
+    <!-- testimonials section start -->
+    <section class="hidden">
+      <section class="testimonials" id="testimonials">
+        <h1 class="heading">
+          <span data-translate="reviews.what">What</span>
+          <span data-translate="reviews.parents">Parents Say</span>
+        </h1>
+        <div class="testimonials-container">
+          <div class="sk-ww-yelp-reviews" data-embed-id="25643806"></div>
+          <script
+            src="https://widgets.sociablekit.com/yelp-reviews/widget.js"
+            defer
+          ></script>
         </div>
-
-        <div class="box">
-          <img src="images/activities2.png" alt="" />
-          <h3>games</h3>
-        </div>
-
-        <div class="box">
-          <img src="images/activities3.png" alt="" />
-          <h3>Read and Learn</h3>
-        </div>
-
-        <div class="box">
-          <img src="images/activities4.png" alt="" />
-          <h3>Sports</h3>
-        </div>
-
-        <div class="box">
-          <img src="images/activities5.png" alt="" />
-          <h3>Paint</h3>
-        </div>
-
-        <div class="box">
-          <img src="images/activities8.png" alt="" />
-          <h3>Music and Sing</h3>
-        </div>
-
-      </div>
+      </section>
     </section>
-
-    <!-- activities section ends -->
+    <!-- testimonials section ends -->
 
     <!-- gallery activities -->
 
     <section class="gallery" id="gallery">
-      <h1 class="heading">our <span>gallery</span></h1>
+      <h1 class="heading">
+        <span data-translate="gallery.our">our</span>
+        <span data-translate="gallery.gallery">gallery</span>
+      </h1>
+      <div class="gallery-intro">
+        <p data-translate="gallery.intro">
+          Take a glimpse into our daily activities and the joyful moments we
+          share with the children in our care.
+        </p>
+      </div>
 
       <div class="gallery-container">
-        <a href="images/album1.jpeg" class="box">
-          <img src="images/album1.jpeg" alt="" />
-          <div class="icon"><i class="fas fa-plus"></i></div>
+        <a href="images/gallery1.jpg" class="gallery-box">
+          <div class="gallery-image-wrapper">
+            <img src="images/gallery1.jpg" alt="Gallery image 1" />
+            <div class="gallery-overlay">
+              <div class="gallery-icon">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+          </div>
         </a>
 
-        <a href="images/album2.jpeg" class="box">
-          <img src="images/album2.jpeg" alt="" />
-          <div class="icon"><i class="fas fa-plus"></i></div>
+        <a href="images/gallery2.png" class="gallery-box">
+          <div class="gallery-image-wrapper">
+            <img src="images/gallery2.png" alt="Gallery image 2" />
+            <div class="gallery-overlay">
+              <div class="gallery-icon">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+          </div>
         </a>
 
-        <a href="images/album3.jpeg" class="box">
-          <img src="images/album3.jpeg" alt="" />
-          <div class="icon"><i class="fas fa-plus"></i></div>
+        <a href="images/gallery3.jpg" class="gallery-box">
+          <div class="gallery-image-wrapper">
+            <img src="images/gallery3.jpg" alt="Gallery image 3" />
+            <div class="gallery-overlay">
+              <div class="gallery-icon">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+          </div>
         </a>
 
-        <a href="images/album4.jpeg" class="box">
-          <img src="images/album4.jpeg" alt="" />
-          <div class="icon"><i class="fas fa-plus"></i></div>
+        <a href="images/gallery4.jpg" class="gallery-box">
+          <div class="gallery-image-wrapper">
+            <img src="images/gallery4.jpg" alt="Gallery image 4" />
+            <div class="gallery-overlay">
+              <div class="gallery-icon">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+          </div>
         </a>
 
-        <a href="images/album5.jpeg" class="box">
-          <img src="images/album5.jpeg" alt="" />
-          <div class="icon"><i class="fas fa-plus"></i></div>
+        <a href="images/gallery5.png" class="gallery-box">
+          <div class="gallery-image-wrapper">
+            <img src="images/gallery5.png" alt="Gallery image 5" />
+            <div class="gallery-overlay">
+              <div class="gallery-icon">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+          </div>
         </a>
 
-        <a href="images/album9.jpeg" class="box">
-          <img src="images/album9.jpeg" alt="" />
-          <div class="icon"><i class="fas fa-plus"></i></div>
+        <a href="images/gallery6.jpg" class="gallery-box">
+          <div class="gallery-image-wrapper">
+            <img src="images/gallery6.jpg" alt="Gallery image 6" />
+            <div class="gallery-overlay">
+              <div class="gallery-icon">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+          </div>
         </a>
-        <a href="images/album13.jpeg" class="box">
-          <img src="images/album13.jpeg" alt="" />
-          <div class="icon"><i class="fas fa-plus"></i></div>
+
+        <a href="images/gallery7.jpg" class="gallery-box">
+          <div class="gallery-image-wrapper">
+            <img src="images/gallery7.jpg" alt="Gallery image 7" />
+            <div class="gallery-overlay">
+              <div class="gallery-icon">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+          </div>
         </a>
-        <a href="images/album12.jpeg" class="box">
-          <img src="images/album12.jpeg" alt="" />
-          <div class="icon"><i class="fas fa-plus"></i></div>
+
+        <a href="images/gallery8.jpeg" class="gallery-box">
+          <div class="gallery-image-wrapper">
+            <img src="images/gallery8.jpeg" alt="Gallery image 8" />
+            <div class="gallery-overlay">
+              <div class="gallery-icon">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+          </div>
         </a>
-        <a href="images/album11.jpeg" class="box">
-          <img src="images/album11.jpeg" alt="" />
-          <div class="icon"><i class="fas fa-plus"></i></div>
-        </a>
-        <a href="images/album10.jpeg" class="box">
-          <img src="images/album10.jpeg" alt="" />
-          <div class="icon"><i class="fas fa-plus"></i></div>
+
+        <a href="images/gallery9.jpeg" class="gallery-box">
+          <div class="gallery-image-wrapper">
+            <img src="images/gallery9.jpeg" alt="Gallery image 9" />
+            <div class="gallery-overlay">
+              <div class="gallery-icon">
+                <i class="fas fa-search-plus"></i>
+              </div>
+            </div>
+          </div>
         </a>
       </div>
     </section>
 
     <!-- gallery activities ends -->
 
-    <!-- contact us section start -->
+    <!-- calendar section start -->
+    <section class="hidden">
+      <section class="calendar" id="calendar">
+        <h1 class="heading">
+          <span data-translate="calendar.important">Important</span>
+          <span data-translate="calendar.dates">Dates</span>
+        </h1>
+        <div class="calendar-container">
+          <div class="calendar-info">
+            <h3 data-translate="calendar.year">2026 Calendar</h3>
+            <p data-translate="calendar.note">
+              Please note our holiday schedule and vacation period
+            </p>
+          </div>
+          <div class="holidays-grid">
+            <div class="holiday-item">
+              <i class="fas fa-calendar-check"></i>
+              <h4 data-translate="calendar.holiday1">
+                Martin Luther King Jr. Day
+              </h4>
+              <p>Monday, January 19, 2026</p>
+              <span class="status closed" data-translate="calendar.closed"
+                >Closed</span
+              >
+            </div>
+            <div class="holiday-item">
+              <i class="fas fa-calendar-check"></i>
+              <h4 data-translate="calendar.holiday2">Presidents' Day</h4>
+              <p>Monday, February 16, 2026</p>
+              <span class="status closed" data-translate="calendar.closed"
+                >Closed</span
+              >
+            </div>
+            <div class="holiday-item">
+              <i class="fas fa-calendar-check"></i>
+              <h4 data-translate="calendar.holiday3">Memorial Day</h4>
+              <p>Monday, May 25, 2026</p>
+              <span class="status closed" data-translate="calendar.closed"
+                >Closed</span
+              >
+            </div>
+            <div class="holiday-item">
+              <i class="fas fa-calendar-check"></i>
+              <h4 data-translate="calendar.holiday4">
+                Emancipation Day (Juneteenth)
+              </h4>
+              <p>Friday, June 19, 2026</p>
+              <span class="status closed" data-translate="calendar.closed"
+                >Closed</span
+              >
+            </div>
+            <div class="holiday-item">
+              <i class="fas fa-calendar-check"></i>
+              <h4 data-translate="calendar.holiday5">Independence Day</h4>
+              <p>Friday, July 3, 2026</p>
+              <span class="status closed" data-translate="calendar.closed"
+                >Closed</span
+              >
+            </div>
+            <div class="holiday-item vacation">
+              <i class="fas fa-umbrella-beach"></i>
+              <h4 data-translate="calendar.vacation">Summer Vacation</h4>
+              <p>Wednesday, June 17 - Monday, July 13, 2026</p>
+              <span class="status closed" data-translate="calendar.closed"
+                >Closed</span
+              >
+            </div>
+            <div class="holiday-item">
+              <i class="fas fa-calendar-check"></i>
+              <h4 data-translate="calendar.holiday6">Labor Day</h4>
+              <p>Monday, September 7, 2026</p>
+              <span class="status closed" data-translate="calendar.closed"
+                >Closed</span
+              >
+            </div>
+            <div class="holiday-item vacation">
+              <i class="fas fa-calendar-check"></i>
+              <h4 data-translate="calendar.thanksgiving">Thanksgiving Break</h4>
+              <p>Wednesday, November 25 - Friday, November 27, 2026</p>
+              <span class="status closed" data-translate="calendar.closed"
+                >Closed</span
+              >
+            </div>
+            <div class="holiday-item vacation">
+              <i class="fas fa-snowflake"></i>
+              <h4 data-translate="calendar.winter">Winter Vacation</h4>
+              <p>Monday, December 21, 2026 - Friday, January 1, 2027</p>
+              <span class="status closed" data-translate="calendar.closed"
+                >Closed</span
+              >
+            </div>
+            <div class="holiday-item return">
+              <i class="fas fa-calendar-alt"></i>
+              <h4 data-translate="calendar.return">Return Date</h4>
+              <p>Monday, January 4, 2027</p>
+              <span class="status open" data-translate="calendar.returnText"
+                >We'll See You Then!</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+    <!-- calendar section ends -->
 
+    <!-- contact us section start -->
     <section class="hidden">
       <section class="contact" id="contact">
-        <h1 class="heading"><span>contact</span> us</h1>
-        
-        <div class="icons-container">
-          <div class="icons">
-            <i class="fas fa-clock"></i>
-            <h3>opening hours :</h3>
-            <p>Monday - Friday: 08:00 am to 5:00 pm</p>
+        <h1 class="heading">
+          <span data-translate="contact.contact">contact</span>
+          <span data-translate="contact.us">us</span>
+        </h1>
+        <div class="contact-intro">
+          <p data-translate="contact.intro">
+            We'd love to hear from you! Reach out to us through any of the
+            methods below or send us a message.
+          </p>
+        </div>
+
+        <div class="contact-info-grid">
+          <div class="contact-card">
+            <div class="contact-icon-wrapper">
+              <i class="fas fa-clock"></i>
+            </div>
+            <h3 data-translate="contact.hours">Opening Hours</h3>
+            <div class="contact-details">
+              <p>
+                <strong data-translate="contact.weekdays"
+                  >Monday - Friday:</strong
+                >
+              </p>
+              <p>07:00 AM to 5:30 PM</p>
+            </div>
           </div>
-          
-          <div class="icons">
-            <i class="fas fa-envelope"></i>
-            <h3>email</h3>
-            <p>Zoilalirianob@gmail.com</p>
-            <p>EnmanuelleML@outlook.com</p>
+
+          <div class="contact-card">
+            <div class="contact-icon-wrapper">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3 data-translate="contact.email">Email</h3>
+            <div class="contact-details">
+              <a href="mailto:zlirianobe@gmail.com">zlirianobe@gmail.com</a>
+            </div>
           </div>
-          
-          <div class="icons">
-            <i class="fas fa-phone"></i>
-            <h3>phone number</h3>
-            <p>+1 510-274-0136 (Spanish)</p>
-            <p>+1 510-265-9453 (English)</p>
+
+          <div class="contact-card">
+            <div class="contact-icon-wrapper">
+              <i class="fas fa-phone"></i>
+            </div>
+            <h3 data-translate="contact.phone">Phone Number</h3>
+            <div class="contact-details">
+              <a href="tel:+12093128052">+1 209 312-8052</a>
+              <span class="phone-label" data-translate="contact.english"
+                >(English)</span
+              >
+              <a href="tel:+15102740136">+1 510 274-0136</a>
+              <span class="phone-label" data-translate="contact.spanish"
+                >(Spanish)</span
+              >
+            </div>
           </div>
         </div>
-        
-        <div class="row">
-        <div class="image">
-          <img src="images/gif.gif" alt="" />
+
+        <!-- Location Section within Contact -->
+        <div class="location-section-in-contact">
+          <div class="location-container">
+            <div class="location-info">
+              <div class="info-box">
+                <div class="info-icon-wrapper">
+                  <i class="fas fa-directions"></i>
+                </div>
+                <h3 data-translate="location.directions">Get Directions</h3>
+                <p
+                  class="directions-text"
+                  data-translate="location.directionsText"
+                >
+                  Click below to get directions from your location
+                </p>
+                <a
+                  href="https://www.google.com/maps/dir/?api=1&destination=4816+Kathleen+Ave,+Castro+Valley,+CA+94546"
+                  target="_blank"
+                  class="btn btn-location"
+                  data-translate="location.googleMaps"
+                >
+                  <i class="fas fa-map-marked-alt"></i>
+                  Open in Google Maps
+                </a>
+              </div>
+            </div>
+            <div class="map-container">
+              <div class="map-wrapper">
+                <iframe
+                  src="https://www.google.com/maps?q=4816+Kathleen+Ave,+Castro+Valley,+CA+94546&output=embed"
+                  width="100%"
+                  height="500"
+                  style="border: 0; border-radius: 1rem"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  title="Zoila's Daycare Location"
+                >
+                </iframe>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <form onsubmit="emailsend(); reset(); return false" action="">
-          <h3>get in touch</h3>
-          <form>
-            <div class="inputBox">
-              <input type="text" placeholder="your name" id="name" required />
-              <input type="email" placeholder="your email" id="email" required />
+
+        <div class="contact-form-section">
+          <div class="form-wrapper">
+            <div class="form-graphic">
+              <div class="graphic-container">
+                <img
+                  src="images/gif.gif"
+                  alt="Contact Us"
+                  class="contact-image"
+                />
+                <div class="graphic-overlay">
+                  <div class="overlay-icon">
+                    <i class="fas fa-envelope-open-text"></i>
+                  </div>
+                  <p data-translate="contact.help">We're here to help!</p>
+                </div>
+              </div>
             </div>
-            <div class="inputBox">
-              <input type="number" placeholder="your number" id="number" required />
-              <input type="text" placeholder="your subject" id="subject" required />
+            <div class="form-container">
+              <div class="form-header">
+                <h3 data-translate="contact.formTitle">Get In Touch</h3>
+                <p data-translate="contact.formDesc">
+                  Send us a message and we'll get back to you as soon as
+                  possible
+                </p>
+              </div>
+              <form
+                action="https://api.web3forms.com/submit"
+                method="POST"
+                class="contact-form"
+              >
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="e29f2204-3c03-47c6-b664-f1c2c0956ae0"
+                />
+                <div class="form-group">
+                  <label for="name">
+                    <i class="fas fa-user"></i>
+                    <span data-translate="contact.name">Your Name</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    data-translate-placeholder="contact.namePlaceholder"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">
+                    <i class="fas fa-envelope"></i>
+                    <span data-translate="contact.emailInput">Your Email</span>
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    data-translate-placeholder="contact.emailPlaceholder"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="message">
+                    <i class="fas fa-comment"></i>
+                    <span data-translate="contact.message">Your Message</span>
+                  </label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    data-translate-placeholder="contact.messagePlaceholder"
+                    placeholder="Tell us how we can help you..."
+                    rows="6"
+                    required
+                  ></textarea>
+                </div>
+                <button class="btn btn-submit" type="submit">
+                  <i class="fas fa-paper-plane"></i>
+                  <span data-translate="contact.send">Send Message</span>
+                </button>
+              </form>
             </div>
-            <textarea placeholder="your message" cols="30" rows="10" id="message" required></textarea>
-            <input type="submit" value="send message" class="btn" />
-          </form>
+          </div>
         </div>
       </section>
     </section>
@@ -311,40 +1179,92 @@
     <!-- contact us section ends -->
 
     <!-- footer starts -->
-  <section class="footer">
-      <div class="box-container">
-        <div class="box">
-          <h3><i class="fas fa-shapes"></i> Zoila's Child Care</h3>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="footer-logo">
+            <i class="fas fa-shapes"></i>
+            <h3>Zoila's Child Care</h3>
+          </div>
+          <p class="footer-tagline" data-translate="footer.tagline">
+            Growing together, always learning: Your trusted Daycare.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h4 data-translate="footer.quickLinks">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home" data-translate="footer.home">Home</a></li>
+            <li><a href="#about" data-translate="footer.about">About Us</a></li>
+            <li>
+              <a href="#activities" data-translate="footer.activities"
+                >Activities</a
+              >
+            </li>
+            <li>
+              <a href="#contact" data-translate="footer.contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 data-translate="footer.contactInfo">Contact Info</h4>
+          <div class="footer-contact">
+            <p>
+              <i class="fas fa-map-marker-alt"></i> 4816 Kathleen Ave, Castro
+              Valley, CA 94546
+            </p>
+            <p><i class="fas fa-phone"></i> +1 209 312-8052</p>
+            <p><i class="fas fa-envelope"></i> zlirianobe@gmail.com</p>
+          </div>
+        </div>
+
+        <div class="footer-section">
+          <h4 data-translate="footer.follow">Follow Us</h4>
+          <div class="social-links">
+            <a
+              href="https://www.instagram.com/zoilas_daycare/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+            >
+              <i class="fab fa-instagram"></i>
+              <span data-translate="footer.instagram">Instagram</span>
+            </a>
+            <a
+              href="https://www.facebook.com/profile.php?id=61551035442788"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+            >
+              <i class="fab fa-facebook-f"></i>
+              <span data-translate="footer.facebook">Facebook</span>
+            </a>
+            <a
+              href="https://wa.me/5102659453"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+            >
+              <i class="fab fa-whatsapp"></i>
+              <span data-translate="footer.whatsapp">WhatsApp</span>
+            </a>
+          </div>
         </div>
       </div>
 
+      <div class="footer-bottom">
+        <p>&copy; 2026 Zoila's Child Care. All rights reserved.</p>
+        <p>&copy; By EMLDeveloper Staff Team</p>
       </div>
-    <section class="contact" class="footer">
-      <div class="icons-container">
-        <div onclick="instagram()" class="icons">
-          <i class="fab fa-instagram"></i>
-          <h3>Instagram</h3>
-          <p>@zoila_childcare</p>
-        </div>
-
-        <div onclick="facebook()" class="icons">
-          <i class="fab fa-facebook-square"></i>
-          <h3>Facebook</h3>
-          <p>Zoila's Childcare</p>
-        </div>
-
-        <div onclick="whatsaap()" class="icons">
-          <i class="fab fa-whatsapp-square"></i>
-          <h3>Whatsapp</h3>
-          <p>+1 510-265-9453 (Spanish & English)</p>
-        </div>
-      </div>
-
-      <div class="credit">@ 2023 by <span>EML-Dev</span></div>
-  </section>
-
+    </footer>
 
     <!-- footer ends -->
+
+    <!-- back to top button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 
     <!-- lightgallery cdn js link -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
